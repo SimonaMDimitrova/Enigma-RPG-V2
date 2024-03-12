@@ -1,0 +1,132 @@
+{JAVASCRIPT}
+<!-- BEGIN switch_user_logged_in -->
+<p class="right rightside">{LAST_VISIT_DATE}</p><!-- END switch_user_logged_in -->
+<p>{CURRENT_TIME}</p>
+{CAT_NAME}
+<br class="clear" />
+
+<!-- BEGIN switch_user_login_form_header -->
+<div class="panel">
+    <div class="inner"><span class="corners-top"><span></span></span>
+        <form action="{S_LOGIN_ACTION}" method="post" name="form_login">
+            <div class="user_login_form center">
+                <label>{L_USERNAME} : <input class="post" type="text" size="10" name="username" /></label>&nbsp;
+                <label>{L_PASSWORD} : <input class="post" type="password" size="10" name="password" /></label>&nbsp;
+                <label>{L_AUTO_LOGIN} : <input class="radio" type="checkbox" name="autologin"
+                        {AUTOLOGIN_CHECKED} /></label>&nbsp;
+                {S_HIDDEN_FIELDS}<input class="mainoption button1" type="submit" name="login" value="{L_LOGIN}" />
+
+                <!-- BEGIN switch_social_login -->
+                <div class="social_btn">
+                    <!-- BEGIN fb_connect -->
+                    <div class="fb-login-button"></div>
+                    <!-- END fb_connect -->
+                    <!-- BEGIN topicit_connect -->
+                    <div class="ti-connect"></div>
+                    <!-- END topicit_connect -->
+                </div>
+                <!-- END switch_social_login -->
+            </div>
+        </form>
+        <span class="corners-bottom"><span></span></span>
+    </div>
+</div>
+<!-- END switch_user_login_form_header -->
+
+<!-- BEGIN message_admin_index -->
+<div class="panel introduction">
+    <div class="inner"><span class="corners-top"><span></span></span>
+        <!-- BEGIN message_admin_titre -->
+        <div class="h3">{message_admin_index.message_admin_titre.MES_TITRE}</div>
+        <!-- END message_admin_titre -->
+
+        <!-- BEGIN message_admin_txt -->
+        <div class="mes-txt">{message_admin_index.message_admin_txt.MES_TXT}</div>
+        <!-- END message_admin_txt -->
+        <span class="corners-bottom"><span></span></span>
+    </div>
+</div>
+<!-- END message_admin_index -->
+
+{CHATBOX_TOP}
+{BOARD_INDEX}
+
+<!-- BEGIN disable_viewonline -->
+
+<!-- BEGIN switch_viewonline_link -->
+<div class="h3 who-is-online"><a href="{U_VIEWONLINE}" rel="nofollow">{L_WHO_IS_ONLINE}</a></div>
+<!-- END switch_viewonline_link -->
+
+<!-- BEGIN switch_viewonline_nolink -->
+<div class="h3">{L_WHO_IS_ONLINE}</div>
+<!-- END switch_viewonline_nolink -->
+
+
+<p class="current-stats">{TOTAL_USERS_ONLINE}<br />
+    {RECORD_USERS}
+
+    <br />
+    {LOGGED_IN_USER_LIST}
+
+    {L_ONLINE_USERS}
+    {L_CONNECTED_MEMBERS}<br />
+    {L_WHOSBIRTHDAY_TODAY}{L_WHOSBIRTHDAY_WEEK}
+
+    <br />
+
+</p>
+<div class="stats">
+    <!-- BEGIN switch_statistics_link -->
+    <div class="h3"><a href="{U_STATISTICS}" rel="nofollow">{L_STATISTICS}</a></div>
+    <!-- END switch_statistics_link -->
+
+    <!-- BEGIN switch_statistics_nolink -->
+    <div class="h3">{L_STATISTICS}</div>
+    <!-- END switch_statistics_nolink -->
+
+    <p class="page-bottom">
+        {TOTAL_POSTS}
+    </p>
+    <p class="page-bottom">
+        {TOTAL_USERS}
+    </p>
+</div>
+
+<!-- BEGIN switch_group_legend -->
+<div class="group-names">
+    <div class="group-name" style="background:#FF7C4C;"><a href="https://enigma-rpg.bulgarianforum.net/g2-group">Game
+            Master</a></div>
+    <div class="group-name" style="background:#D1C75C;"><a
+            href="https://enigma-rpg.bulgarianforum.net/g3-group">Fire</a></div>
+    <div class="group-name" style="background:#00CCFF;"><a href="https://enigma-rpg.bulgarianforum.net/g4-group">Air</a>
+    </div>
+    <div class="group-name" style="background:#24D42F;"><a
+            href="https://enigma-rpg.bulgarianforum.net/g5-group">Earth</a></div>
+    <div class="group-name" style="background:#918A8A;margin-right: unset;"><a
+            href="https://enigma-rpg.bulgarianforum.net/g6-group">Passengers in hibernation</a></div>
+</div>
+<!-- END switch_group_legend -->
+
+<p class="page-bottom newest-user">
+    {NEWEST_USER}
+</p>
+<!-- BEGIN switch_chatbox_activate -->
+<div class="h3"><a href="{S_JOIN_CHAT}" target="ChatBox">{CHATBOX_NAME}</a></div>
+<div class="page-bottom">
+    {TOTAL_CHATTERS_ONLINE}&nbsp;:&nbsp;
+    {CHATTERS_LIST}<br />
+</div>
+<!-- BEGIN switch_chatbox_popup -->
+<div id="chatbox_popup"></div>
+<script type="text/javascript">
+    insertChatBoxPopup('{disable_viewonline.switch_chatbox_activate.switch_chatbox_popup.U_FRAME_CHATBOX}', '{L_CLICK_TO_JOIN_CHAT}');
+</script>
+<!-- END switch_chatbox_popup -->
+<!-- END switch_chatbox_activate -->
+<!-- END disable_viewonline -->
+
+{CHATBOX_BOTTOM}
+
+<br style="clear:both" />
+
+{AUTO_DST}

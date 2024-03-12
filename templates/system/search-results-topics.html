@@ -1,0 +1,71 @@
+<!-- BEGIN navmenu -->
+<div class="topic-actions">
+    <p>
+        <a class="nav" href="{U_INDEX}">{L_INDEX}</a> :: {L_SEARCH_TITLE}
+    </p>
+</div>
+<!-- END navmenu -->
+
+<form action="{S_ACTION}" method="post" name="post" onsubmit="return verify_select();">
+    <div class="forabg">
+        <div class="inner"><span class="corners-top"><span></span></span>
+
+            <ul class="topics">
+                <li class="header">
+                    <dl class="icon">
+                        <dt style="width:100%;">
+                            {L_SEARCH_MATCHES}
+                        </dt>
+                    </dl>
+                </li>
+            </ul>
+
+            <ul class="topiclist topics" style="padding-bottom: 12px; background: #211724;">
+                <!-- BEGIN searchresults -->
+                <li class="row {searchresults.ROW_ALT_CLASS}">
+                    <dl class="icon" style="background-image: url('{searchresults.TOPIC_FOLDER_IMG}');">
+                        <dd class="dterm" title="{searchresults.L_TOPIC_FOLDER_ALT}" {searchresults.TOPIC_ICON}>
+                            {searchresults.NEWEST_POST_IMG}
+                            {searchresults.PARTICIPATE_POST_IMG}&nbsp;
+                            {searchresults.TOPIC_TYPE}
+                            <div class="topic-title-container">
+                                <h2 class="topic-title"><a class="topictitle"
+                                        href="{searchresults.U_VIEW_TOPIC}">{searchresults.TOPIC_TITLE}</a></h2>
+                            </div>
+                            <br />
+                            {searchresults.GOTO_PAGE_NEW}
+                            <span class="span-tab">{searchresults.L_BY} {searchresults.TOPIC_AUTHOR}
+                                {searchresults.L_IN} <a
+                                    href="{searchresults.U_VIEW_FORUM}">{searchresults.FORUM_NAME}</a></span>
+                            <!-- BEGIN nav_tree -->{searchresults.TOPIC_NAV_TREE_NEW}<!-- END nav_tree -->
+                        </dd>
+                        <dd class="topic-statistic">
+                            <div class="replies-views">
+                                <div class="replies">{searchresults.REPLIES} <span class="topic-replies">replies</span>
+                                </div>
+                                <div class="views">{searchresults.VIEWS} <span class="topic-viewes">views</span></div>
+                            </div>
+                            <div class="lastpost">
+
+                                <span>{searchresults.LAST_POST_AUTHOR}
+                                    {searchresults.LAST_POST_IMG} {searchresults.LAST_POST_TIME}</span>
+
+                                <!-- BEGIN avatar -->
+                            </div>
+                            <!-- END avatar -->
+                        </dd>
+                    </dl>
+                </li>
+                <!-- END searchresults -->
+            </ul>
+
+            <div class="clear"></div>
+            <span class="corners-bottom"><span></span></span>
+        </div>
+    </div>
+
+    <p class="right-box"><a href="#top">{L_BACK_TO_TOP}</a></p>
+    <p class="pagination">{PAGINATION}</p>
+</form>
+<div class="clear"></div>
+{JUMPBOX}

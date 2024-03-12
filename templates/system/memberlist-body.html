@@ -1,0 +1,60 @@
+<!-- BEGIN switch_user_logged_in -->
+<p class="right rightside">{LAST_VISIT_DATE}</p>
+<!-- END switch_user_logged_in -->
+
+<p>{CURRENT_TIME}</p>
+<h1 class="page-title solo">{PAGE_TITLE}</h1>
+
+<form action="{S_MODE_ACTION}" method="get">
+    <div class="panel">
+        <div class="inner"><span class="corners-top"><span></span></span>
+            <h2 class="h3">{L_ORDER_OR_SELECT}</h2>
+            <p style="text-align:right; margin: 0; padding: 0;">
+                {L_USER_SELECT}&nbsp;<input type="text" class="inputbox tiny" name="username" maxlength="25" size="20"
+                    value="{L_USER_SELECT_VALUE}" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                {L_SELECT_SORT_METHOD}&nbsp;{S_MODE_SELECT}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                {L_ORDER}&nbsp;{S_ORDER_SELECT}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                {S_HIDDEN_SID}
+                <input class="button2" type="submit" name="submit" value="{L_SUBMIT}" />
+            </p>
+            <span class="corners-bottom"><span></span></span>
+        </div>
+    </div>
+</form>
+
+<div class="memberlist" style="clear: both;">
+    <!-- BEGIN memberrow -->
+    <div class="member-wrapper">
+
+        <div class="member-avatar">
+
+            <div class="member-row">{memberrow.ROW_NUMBER}</div>
+            <div class="pm">{memberrow.PM_IMG}</div>
+            <a href="{memberrow.U_VIEWPROFILE}">{memberrow.AVATAR_IMG}</a>
+
+        </div>
+
+        <div class="member-delimiter"></div>
+
+        <div class="member-info-wrapper">
+            <div class="member-username-wrapper">
+                <div class="member-username"><a href="{memberrow.U_VIEWPROFILE}">{memberrow.USERNAME}</a></div>
+            </div>
+            <div class="member-last-visit">{memberrow.LASTVISIT}</div>
+
+            <div class="member-stats">
+                <div class="member-posts">{memberrow.POSTS} Posts</div>
+                <div class="member-joined-date">{memberrow.JOINED}</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- END memberrow -->
+</div>
+
+
+<div class="pagination" style="float:none;">
+    <!-- BEGIN switch_pagination -->
+    {PAGINATION}<br /><br />
+    <!-- END switch_pagination -->
+</div>
